@@ -11,7 +11,7 @@ public class driver {
 		
 		System.out.println(Arrays.toString(testArray));
 		
-		sort.selectionSort(testArray);
+		sort.insertionSort(testArray);
 		System.out.println(Arrays.toString(testArray));
 
 	}

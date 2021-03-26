@@ -21,8 +21,18 @@ public class sort {
 		array[index2]=temp;
 		
 	}
-	public static void insertionSort() {
+	public static void insertionSort(int array[]) {
+		int len = array.length;
 		
+		for(int i=0;i<len-1;i++){
+			for(int j=i+1;j>0;j--){
+				if(array[j]<array[j-1]){
+					//swap j and j-1
+					swap(array,j,j-1);
+				}
+					
+			}
+		}
 	}
 	
 

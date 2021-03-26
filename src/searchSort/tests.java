@@ -38,7 +38,7 @@ public class tests {
 		
 		if(shuffle) {
 		Random random = new Random();
-        random.nextInt();
+		random.nextInt();
         
 		for(int j=0;j<arraySize;j++) {
 			
