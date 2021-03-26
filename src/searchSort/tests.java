@@ -31,7 +31,7 @@ public class tests {
 			i++;
 			
 		}
-		System.out.printf("Initializing Array [%d to %d]\n",arrayStart,arrayEnd);
+		
 		//System.out.println(Arrays.toString(array));
 		
 		//shuffle the array
@@ -50,7 +50,7 @@ public class tests {
 		
 		}
 
-		System.out.println("Shuffling Array..");
+		
 		
 		
 		//System.out.println(Arrays.toString(array));
@@ -65,8 +65,31 @@ public class tests {
 		setup(false);
 		//BINARY 
 		int randomValue= arrayStart + (int)(Math.random() * ((arrayEnd - arrayStart) + 1));
-		System.out.println(randomValue);
 		assertEquals(Search.binarySearch(array, randomValue), Arrays.asList(array).indexOf(randomValue));
+	}
+	
+	@Test
+	public void testInsertionSort() {
+		setup(true);
+		
+		int tempArray[] = array;
+		
+		sort.insertionSort(tempArray);
+		Arrays.sort(array);
+		assertEquals(tempArray,array);
+		
+	}
+	
+	@Test
+	public void testSelection() {
+		setup(true);
+		
+		int tempArray[] = array;
+		
+		sort.selectionSort(tempArray);
+		Arrays.sort(array);
+		assertEquals(tempArray,array);
+		
 	}
 
 }
